@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  margin-left: 13.5em;
+}
+@media (max-width: 770px) {
+  .main {
+    margin: 0;
+  }
+}
+
+nav {
+  height: 100%;
+  width: 13.5em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 4px solid #4FB3CD;
+}
+@media (max-width: 770px) {
+  nav {
+    display: none;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid #4FB3CD;
+  margin-bottom: 7em;
+}
+.logo a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 7.4em;
+  text-align: center;
+  color: #4FB3CD;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav li {
+  text-align: center;
+  list-style-type: none;
+  margin: 1em 0;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #23292b;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 0.1em 0;
+  border-bottom: solid #4FB3CD 3px;
+}
+.main-nav a:not(:hover) {
+  border: none;
+}
+.main-nav li:nth-of-type(5) {
+  padding: 0.5em 0;
+  border-top: 3px solid #4FB3CD;
+  border-bottom: 3px solid #4FB3CD;
+}
+.main-nav li:nth-of-type(5) a {
+  font-weight: 600;
+}
+.main-nav li:nth-of-type(5) a:hover {
+  border: none;
+}
+
+.socials {
+  text-align: center;
+  margin-top: 0.8em;
+}
+.socials i {
+  padding: 0 0.5em;
+  color: #4FB3CD;
+  font-size: 20px;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-image {
+  background-image: linear-gradient(0.25turn, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/MarbleSwirls.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+.hero-image h1, .hero-image h2 {
+  position: relative;
+  top: 34%;
+}
+.hero-image h1 {
+  font-size: 4em;
+}
+.hero-image h2 {
+  font-weight: 400;
+}
+
+.scroll-down {
+  position: absolute;
+  width: 12em;
+  left: 50%;
+  transform: translateX(-6em);
+  bottom: 10%;
+  color: white;
+  text-align: center;
+}
+.scroll-down a {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: white;
+}
+.scroll-down a::after {
+  transform-origin: right;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: -150%;
+  content: "";
+  border-radius: 30% 30%;
+  width: 7px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: white;
+}
+.scroll-down a::before {
+  transform-origin: left;
+  position: absolute;
+  display: flex;
+  right: 50%;
+  bottom: -150%;
+  content: "";
+  border-radius: 30% 30%;
+  width: 7px;
+  height: 20px;
+  transform: rotate(-45deg);
+  background-color: white;
+}
+
+#projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5em 4em 3em;
+}
+@media (max-width: 770px) {
+  #projects-section {
+    padding: 5em 1.5em 3em;
+  }
+}
+
+.project {
+  position: relative;
+  width: calc(33.3% - 12px);
+  color: #1b424c;
+  margin-bottom: 2em;
+}
+@media (max-width: 1500px) {
+  .project {
+    width: calc(50% - 12px);
+  }
+}
+@media (max-width: 1050px) {
+  .project {
+    width: 100%;
+  }
+}
+.project .img-wrap {
+  position: relative;
+  height: 35vh;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.2s ease-out;
+}
+.project .project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.2s ease-out;
+}
+.project .img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.2;
+  transition: all 0.2s ease-out;
+}
+.project h2 {
+  font-size: 30px;
+  transition: all 0.2s ease-out;
+}
+.project a {
+  text-decoration: none;
+  color: #1b424c;
+}
+.project a span {
+  display: inline-flex;
+  line-height: 30px;
+  transition: all 0.2s ease-out;
+}
+.project a i {
+  font-size: 30px;
+  display: inline-flex;
+}
+.project a:hover h2 {
+  opacity: 0.6;
+}
+.project a:hover span {
+  opacity: 0.6;
+}
+.project a:hover .img-overlay {
+  background-color: black;
+}
+.project a:hover .project-image {
+  transform: scale(1.01);
+}
+.project a:hover .img-wrap {
+  box-shadow: 0 0 0.8em 0.1em #d6d6d6;
+}
+
+#form-section {
+  display: flex;
+  padding: 0 4em 4em;
+}
+@media (max-width: 950px) {
+  #form-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 770px) {
+  #form-section {
+    padding: 0 1.5em 2em;
+  }
+}
+
+.contact {
+  width: 330px;
+  margin: 0 4em 2em 0;
+  color: #1b424c;
+}
+.contact p, .contact h2, .contact h3 {
+  margin-bottom: 15px;
+}
+.contact span {
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (max-width: 950px) {
+  .contact {
+    width: 100%;
+  }
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+form input {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: lightgrey;
+}
+form #firstname, form #lastname {
+  width: calc(50% - 38px);
+}
+form #message {
+  padding-bottom: 10em;
+}
+form input[type=submit] {
+  background-color: white;
+  color: #1b424c;
+  width: 11em;
+  border-color: #1b424c;
+  font-weight: 600;
+}
+
+.scroll-up {
+  left: 50%;
+  color: black;
+  text-align: center;
+  padding: 5em 0 2em;
+}
+.scroll-up a {
+  position: relative;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: black;
+}
+.scroll-up a::after {
+  transform-origin: right;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 150%;
+  content: "";
+  border-radius: 30% 30%;
+  width: 7px;
+  height: 20px;
+  transform: rotate(-45deg);
+  background-color: black;
+}
+.scroll-up a::before {
+  transform-origin: left;
+  position: absolute;
+  display: flex;
+  right: 50%;
+  bottom: 150%;
+  content: "";
+  border-radius: 30% 30%;
+  width: 7px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: black;
+}/*# sourceMappingURL=styles.css.map */

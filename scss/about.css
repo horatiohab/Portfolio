@@ -1,0 +1,11 @@
+.about-section {
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  height: 100vh;
+  bottom: 0px;
+}
+.about-section .about {
+  position: relative;
+  top: 34%;
+}/*# sourceMappingURL=about.css.map */

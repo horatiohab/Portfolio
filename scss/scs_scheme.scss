@@ -1,0 +1,88 @@
+.scs-section {
+    // background-image: linear-gradient(0.25turn, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("/images/MarbleSwirls.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+    text-align: center;
+    color: white;
+    h1 {
+        text-align: center;
+        position: relative;
+        top: 8%;
+    }
+    ul {
+        list-style-type: none;
+    }
+    h2 {
+        margin-bottom: 1em;
+    }
+}
+
+.scs-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10%;
+
+}
+
+.scs-cards  {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    // background-color: rgba(8, 12, 21, .4);
+    // box-shadow: 0 0 1em .01em black;
+    // border-radius: 0.25em;
+}
+
+.scs-card {
+    margin: 2em;
+    text-align: center;
+    background-color: rgba(8, 12, 21, .3);
+    box-shadow: 0 0 1em .01em black;
+    // border: 1px solid #c9c9c9;
+    border-radius: 0.25em;
+    padding: 2em;
+    
+}
+
+.second-row {
+    display: flex;
+    .scs-card {
+        margin-bottom: 4em;
+        @media (min-width: 1200px) { 
+            width: 100%;            
+        } 
+    }
+    @media (max-width: 1200px) { 
+        display: block;
+    }    
+}
+
+.treehouse {
+    // display: flex;
+    // flex-direction: column;
+    
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+.treehouse-profile {
+    display: flex;
+    justify-content: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 20px;
+        color: #5FCF80;
+    }
+    svg {
+        width: 50px;
+        height: 50px;
+        align-self: center;
+    }
+}

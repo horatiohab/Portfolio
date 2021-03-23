@@ -1,0 +1,80 @@
+.scs-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+.scs-section h1 {
+  text-align: center;
+  position: relative;
+  top: 8%;
+}
+.scs-section ul {
+  list-style-type: none;
+}
+.scs-section h2 {
+  margin-bottom: 1em;
+}
+
+.scs-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+}
+
+.scs-cards {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scs-card {
+  margin: 2em;
+  text-align: center;
+  background-color: rgba(8, 12, 21, 0.3);
+  box-shadow: 0 0 1em 0.01em black;
+  border-radius: 0.25em;
+  padding: 2em;
+}
+
+.second-row {
+  display: flex;
+}
+.second-row .scs-card {
+  margin-bottom: 4em;
+}
+@media (min-width: 1200px) {
+  .second-row .scs-card {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .second-row {
+    display: block;
+  }
+}
+
+.treehouse p {
+  margin-bottom: 1em;
+}
+
+.treehouse-profile {
+  display: flex;
+  justify-content: center;
+}
+.treehouse-profile a {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 20px;
+  color: #5FCF80;
+}
+.treehouse-profile svg {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}/*# sourceMappingURL=scs_scheme.css.map */
