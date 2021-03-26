@@ -3,7 +3,7 @@ body {
 }
 
 .scs-section {
-    background-image: linear-gradient(0.4turn, rgba(55, 177, 165, .8), rgba(111, 59, 125, .8)), url("/images/pexels-tom-swinnen-2249961.jpg");  
+    background-image: linear-gradient(0.4turn, rgba(55, 177, 165, .8), rgba(111, 59, 125, .8)), url("../images/pexels-tom-swinnen-2249961.jpg");  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -17,15 +17,12 @@ body {
 }
 
 .scs-wrapper {
-    // min-height: 92vh;
     width: 100%;
-    // padding: 2%;
     padding: 0 20%;
     h1 {
         font-size: 3em;
         text-align: center;
         padding: 1em 0;
-        // color: #24919D;
         @media (min-width: 1920px) {
             font-size: 2.6vw;
         }  
@@ -38,31 +35,6 @@ body {
         padding: 0 5%;
     } 
 }
-
-// .scs-card {
-//     position: relative;
-//     height: 100%;
-//     border-radius: 5px;
-//     // box-shadow: 0 0 4px 1px rgba(136, 136, 136, 0.5); 
-//     // background-image: linear-gradient(0.25turn, rgba(167, 167, 167, 0.4), rgba(255, 255, 255, 0.4));
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     color: white;
-//     padding: 0 5%;
-//     @media (min-width: 1920px) { // Mobile 
-//         padding: 0 15%;
-//     }  
-//     hr {
-//         color: white;
-//         opacity: .3;
-//     }
-// }
-
-// .card-contents {
-//     width: 100%; 
-// }
 
 .card-info {
     display: flex;
@@ -94,7 +66,7 @@ body {
     }
     h2 {
         padding-bottom: 1em;   
-        font-size: 2.4vh;
+        font-size: 1.8em;
     }
     p, ul{
         // color: #424242;

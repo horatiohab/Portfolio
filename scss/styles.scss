@@ -6,11 +6,7 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: 'Poppins', sans-serif;  
-      
 }
 
 .main {
@@ -25,14 +21,14 @@ body {
     border-style: none;
     background: none;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     width: 50px;
     top: 0;
     left: 0;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin: 1em 2em;
     span {
         width: 100%;
         height: 4px;
@@ -45,7 +41,7 @@ body {
 }
 
 nav {
-    height: 100%;
+    height: 100vh;
     width: 13.5em;
     position: fixed;
     z-index: 1;
@@ -53,9 +49,6 @@ nav {
     left: 0;
     display: flex;
     flex-direction: column;
-    // border-right: 4px solid #8BB0C3;
-    // background-color: #575b87;
-    // background-image: linear-gradient(.35turn, rgba(112, 105, 160, .7), rgba(87, 122, 158, .9));
     background-image: linear-gradient(0.4turn, rgba(55, 177, 165, .8), rgba(111, 59, 125, .8));
     background-position: left;
     background-repeat: no-repeat;
@@ -71,7 +64,10 @@ nav {
     display: flex;
     justify-content: center;
     border-bottom: 4px solid rgba(173, 172, 196, .5);
-    margin-bottom: 7em;
+    margin-bottom: 11.5vh;
+    @media (max-height: 560px) {
+        display: none;
+    }  
     a {
         text-decoration: none;
         font-weight: 600;
@@ -88,11 +84,10 @@ nav {
     li {
         text-align: center;
         list-style-type: none;
-        margin: 1em 0;        
+        margin: 1.7vh 0;        
     }
     a {
         text-decoration: none;
-        // color: #23292b;
         color: #b5e0e5;
         font-size: 1.2em;
         font-weight: 500;
@@ -119,6 +114,9 @@ nav {
 .socials {
     text-align: center;
     margin-top: .8em;
+    a {
+        text-decoration: none;
+    }
     i {
         padding: 0 .5em;
         color: #b5e0e5;
@@ -134,7 +132,7 @@ nav {
 
 .hero-image {
     position: relative;
-    background-image: linear-gradient(0.4turn, rgba(55, 177, 165, .8), rgba(111, 59, 125, .8)), url("/images/pexels-tom-swinnen-2249961.jpg");
+    background-image: linear-gradient(0.4turn, rgba(55, 177, 165, .8), rgba(111, 59, 125, .8)), url("../images/pexels-tom-swinnen-2249961.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -325,7 +323,11 @@ form {
         margin-bottom: 1em;
         border: 2px solid #ccc;
         border-radius: 4px;
-        background-color: lightgrey;
+        background-color: rgb(226, 226, 226);
+        &:focus {
+            outline: none;
+            background-color: darken(rgb(226, 226, 226), 5%);
+        }
     }
     #firstname, #lastname {
         width: calc(50% - 38px);
