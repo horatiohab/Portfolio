@@ -1,11 +1,98 @@
 .about-section {
   position: relative;
-  text-align: center;
-  vertical-align: center;
-  height: 100vh;
-  bottom: 0px;
+  background-image: linear-gradient(0.4turn, rgba(55, 177, 165, 0.8), rgba(111, 59, 125, 0.8)), url("/images/pexels-tom-swinnen-2249961.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
 }
-.about-section .about {
+
+.about-contents {
+  padding: 0 20%;
+}
+.about-contents h1 {
+  font-size: 3em;
+  text-align: center;
+  padding-top: 1em;
+}
+@media (min-width: 1920px) {
+  .about-contents {
+    font-size: 1vw;
+  }
+}
+@media (max-width: 1400px) {
+  .about-contents {
+    padding: 0 5%;
+  }
+}
+
+.about-wrapper h2 {
+  font-size: 2em;
+  padding-top: 1em;
+}
+@media (min-width: 1920px) {
+  .about-wrapper h2 {
+    font-size: 1.8vw;
+  }
+}
+.about-wrapper ul {
+  font-size: 1.2em;
+  list-style-type: none;
+}
+@media (min-width: 1920px) {
+  .about-wrapper ul {
+    font-size: 1vw;
+  }
+}
+.about-wrapper ul li {
+  padding-top: 1em;
+}
+.about-wrapper h3 {
+  font-size: 1.5em;
+  padding-top: 1em;
+}
+@media (min-width: 1920px) {
+  .about-wrapper h3 {
+    font-size: 1.3vw;
+  }
+}
+.about-wrapper hr {
+  color: white;
+  opacity: 0.4;
+}
+.about-wrapper h4 {
+  font-size: 1em;
+}
+@media (min-width: 1920px) {
+  .about-wrapper h4 {
+    font-size: 1vw;
+  }
+}
+.about-wrapper span {
+  font-size: 0.8em;
+}
+@media (min-width: 1920px) {
+  .about-wrapper span {
+    font-size: 0.8vw;
+  }
+}
+
+.profile-img {
   position: relative;
-  top: 34%;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+}
+.profile-img img {
+  height: 100%;
+}
+.profile-img .profile-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-image: radial-gradient(rgba(55, 177, 165, 0), rgba(111, 59, 125, 0.2));
 }/*# sourceMappingURL=about.css.map */
