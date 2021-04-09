@@ -1,3 +1,5 @@
+const mobileWidth = window.matchMedia("(max-width: 770px)"); // mobile view media query
+
 // Typing text animation and fade in text
 const bannerText = 'My Name Is Horatio Bennett';
 const letters = bannerText.split("");
@@ -34,23 +36,41 @@ $(".cross-btn").click(function() {
     $('body').css('overflow', 'visible');
 }); 
 
-$("li a").click(function() {
-    $(".cross-btn").hide();
-    $(".menu-btn").show();
-    $(".sidenav").hide();
-    $('body').css('overflow', 'visible');
-}); 
+if (mobileWidth.matches) {
+    $("li a").click(function() {
+        $(".cross-btn").hide();
+        $(".menu-btn").show();
+        $(".sidenav").hide();
+        $('body').css('overflow', 'visible');
+    }); 
+}
+
+// Reset mobile stuff when resizing the window
+window.onresize = resetToggles;
+
+function resetToggles() {
+    if (!mobileWidth.matches) {
+        $('.mobile-nav').css("box-shadow", "none");
+        $(".cross-btn").hide();
+        $(".menu-btn").show();
+        $(".sidenav").show();
+        $('body').css('overflow', 'visible');
+    } else {
+        $(".sidenav").hide();
+    }
+};
 
 // Drop shadow appears under mobile navbar when not at top of page
 $(window).on("scroll", function() {
     const scrollPos = $(window).scrollTop();
-    if (scrollPos <= 0) {
-        $('.mobile-nav').css("box-shadow", "none");
-    }   else {
-        $('.mobile-nav').css("box-shadow", "0 0 4px 1px rgba(0, 0, 0, .2)");
+    if (mobileWidth.matches) {
+        if (scrollPos <= 0) {
+            $('.mobile-nav').css("box-shadow", "none");
+        }   else {
+            $('.mobile-nav').css("box-shadow", "0 0 4px 1px rgba(0, 0, 0, .2)");
+        }
     }
 });
-
 
 // Mobile navbar disappears when scrolling down and reappears when scrolling up, but only after passing the hero image
 var prevScrollpos = window.pageYOffset;
