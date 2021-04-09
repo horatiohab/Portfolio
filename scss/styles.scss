@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;  
+    scroll-behavior: smooth;
 }
 
 .main {
@@ -25,7 +26,7 @@
     height: 76px;
     z-index: 1;
     overflow: hidden;
-    // box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2); 
+    transition: top 0.3s;
 }
 
 .nav-bg {
@@ -75,6 +76,36 @@
     }
 }
 
+.cross-btn {
+    border-style: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    width: 45px;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+    transform: translateY(34px);
+    display: none;
+    span {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #b5e0e5;
+        // margin: .3em 0;
+        
+        &:nth-of-type(1) {
+            rotate: 45deg;
+        }
+        &:nth-of-type(2) {
+            rotate: -45deg;
+        }
+    }
+}
+
 nav {
     height: 100vh;
     width: 13.5em;
@@ -84,7 +115,7 @@ nav {
     left: 0;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(0.4turn, rgba(55, 177, 165, .8), rgba(111, 59, 125, .8));
+    background-image: linear-gradient(0.4turn, rgb(95, 192, 183), rgb(140, 99, 151));
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,6 +123,7 @@ nav {
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2); 
     @media (max-width: 770px) { // Mobile 
         display: none;
+        width: 100vw;
     }  
 }
 
@@ -101,6 +133,9 @@ nav {
     border-bottom: 4px solid rgba(173, 172, 196, .5);
     margin-bottom: 11.5vh;
     @media (max-height: 560px) {
+        display: none;
+    }  
+    @media (max-width: 770px) { // Mobile 
         display: none;
     }  
     a {
@@ -116,10 +151,16 @@ nav {
 .main-nav {
     display: flex;
     flex-direction: column;
+    @media (max-width: 770px) { // Mobile 
+        margin-top: 76px; 
+    } 
     li {
         text-align: center;
         list-style-type: none;
-        margin: 1.7vh 0;        
+        margin: 1.7vh 0; 
+        @media (max-width: 770px) { // Mobile 
+            margin: 4vh 0; 
+        }         
     }
     a {
         text-decoration: none;
@@ -191,11 +232,30 @@ nav {
         } 
     }
     h2 {
+        display: none;
         font-weight: 400;
     }
 }
 
+@keyframes flash {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.sentence::after {
+    display: inline-block;
+    // width: .08em;
+    // height: .8em;
+    font-weight: 400;
+    content: "|";
+    // background-color: white;
+    animation: flash .6s linear infinite alternate;
+}
+
 .scroll-down {
+    display: none;
     position: absolute;
     width: 12em;
     left: 50%;
